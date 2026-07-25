@@ -546,7 +546,7 @@
                 <!-- BOOKING FORM -->
                 <div class="booking-form-container">
                     <form 
-                        action="https://formspree.io/f/YOUR_FORM_ID_HERE" 
+                        action="https://formspree.io/f/xkodpznz" 
                         method="POST" 
                         class="booking-form"
                     >
@@ -891,6 +891,20 @@
             el.classList.add('reveal');
             observer.observe(el);
         });
+
+                // Show thank you message after form submission
+        if (window.location.hash === '#booking-thanks') {
+            const thanksDiv = document.getElementById('booking-thanks');
+            const formContainer = document.querySelector('.booking-content');
+            if (thanksDiv && formContainer) {
+                formContainer.style.display = 'none';
+                thanksDiv.style.display = 'block';
+                // Scroll to thank you message
+                setTimeout(() => {
+                    thanksDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 500);
+            }
+        }
     </script>
 
 </body>
