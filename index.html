@@ -41,6 +41,7 @@
                 <li><a href="#explore">Explore</a></li>
                 <li><a href="#events">Events</a></li>
                 <li><a href="#location">Location</a></li>
+                <li><a href="#booking">Book Now</a></li>
                 <li><a href="#contact" class="nav-cta">Contact Us</a></li>
             </ul>
         </div>
@@ -195,7 +196,7 @@
                             <span><i class="fas fa-solar-panel"></i> Solar Power</span>
                         </div>
                         <div class="room-price">
-                            <a href="#contact" class="btn btn-secondary">Contact for Rates</a>
+                            <a href="#booking" class="btn btn-secondary">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -242,7 +243,7 @@
                             <span><i class="fas fa-solar-panel"></i> Solar Power</span>
                         </div>
                         <div class="room-price">
-                            <a href="#contact" class="btn btn-secondary">Register Interest</a>
+                            <a href="#booking" class="btn btn-secondary">Register Interest</a>
                         </div>
                     </div>
                 </div>
@@ -528,6 +529,206 @@
         </div>
     </section>
 
+        <!-- ============================================ -->
+    <!-- BOOKING SECTION                              -->
+    <!-- ============================================ -->
+    <section id="booking" class="section section-white">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Reservations</p>
+                <h2 class="section-title">Book Your Stay</h2>
+                <div class="title-line"></div>
+                <p class="section-description">Fill in the form below and we'll confirm your reservation within 2 hours. Alternatively, book directly via WhatsApp for the fastest response.</p>
+            </div>
+            
+            <div class="booking-content">
+                
+                <!-- BOOKING FORM -->
+                <div class="booking-form-container">
+                    <form 
+                        action="https://formspree.io/f/YOUR_FORM_ID_HERE" 
+                        method="POST" 
+                        class="booking-form"
+                    >
+                        <!-- Hidden field to identify the form -->
+                        <input type="hidden" name="_subject" value="New Booking Request — The Oasis Buea">
+                        
+                        <!-- Redirect after submission -->
+                        <input type="hidden" name="_next" value="https://towafohtung1-jpg.github.io/theoasisbuea/#booking-thanks">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guest-name">Full Name <span class="required">*</span></label>
+                                <input type="text" id="guest-name" name="guest_name" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guest-phone">Phone / WhatsApp <span class="required">*</span></label>
+                                <input type="tel" id="guest-phone" name="phone_whatsapp" placeholder="+237 6XX XXX XXX" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guest-email">Email</label>
+                                <input type="email" id="guest-email" name="email" placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="guest-country">Country</label>
+                                <input type="text" id="guest-country" name="country" placeholder="Your country">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkin">Check-in Date <span class="required">*</span></label>
+                                <input type="date" id="checkin" name="checkin_date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout">Check-out Date <span class="required">*</span></label>
+                                <input type="date" id="checkout" name="checkout_date" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="room-type">Room Type <span class="required">*</span></label>
+                                <select id="room-type" name="room_type" required>
+                                    <option value="" disabled selected>Select a room type</option>
+                                    <option value="Two-Bedroom Apartment">Two-Bedroom Apartment</option>
+                                    <option value="One-Bedroom Apartment">One-Bedroom Apartment</option>
+                                    <option value="Studio Apartment">Studio Apartment (Coming Oct 2026)</option>
+                                    <option value="Not Sure - Need Advice">Not sure — advise me</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Number of Guests <span class="required">*</span></label>
+                                <select id="guests" name="number_of_guests" required>
+                                    <option value="" disabled selected>How many guests?</option>
+                                    <option value="1">1 Guest</option>
+                                    <option value="2">2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="5+">5+ Guests</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="purpose">Purpose of Visit</label>
+                                <select id="purpose" name="visit_purpose">
+                                    <option value="" disabled selected>What brings you to Buea?</option>
+                                    <option value="Tourism / Leisure">Tourism / Leisure</option>
+                                    <option value="Business">Business</option>
+                                    <option value="Mount Cameroon Hiking">Mount Cameroon Hiking</option>
+                                    <option value="University Visit">University Visit</option>
+                                    <option value="Event / Celebration">Event / Celebration</option>
+                                    <option value="Family Visit">Family Visit</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="how-found">How Did You Find Us?</label>
+                                <select id="how-found" name="how_found">
+                                    <option value="" disabled selected>How did you hear about us?</option>
+                                    <option value="Google Search">Google Search</option>
+                                    <option value="Instagram">Instagram</option>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="WhatsApp">WhatsApp</option>
+                                    <option value="Friend / Referral">Friend / Referral</option>
+                                    <option value="Booking.com">Booking.com</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="message">Special Requests or Questions</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Any special requirements? Airport pickup needed? Event planning? Let us know..."></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-paper-plane"></i> Send Booking Request
+                            </button>
+                            <p class="form-note">We'll confirm your reservation within 2 hours during business hours.</p>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- QUICK BOOKING SIDEBAR -->
+                <div class="booking-sidebar">
+                    
+                    <div class="quick-book-card">
+                        <div class="quick-book-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>Book via WhatsApp</h3>
+                        <p>Prefer to book directly? Click below to start a chat with your booking details pre-filled.</p>
+                        <a href="https://wa.me/237670000000?text=Hi!%20I'd%20like%20to%20book%20at%20The%20Oasis%20Buea.%0A%0ARoom%20Type%3A%20%0ACheck-in%3A%20%0ACheck-out%3A%20%0AGuests%3A%20%0A%0APlease%20confirm%20availability.%20Thank%20you!" 
+                           target="_blank" 
+                           class="btn btn-whatsapp btn-full">
+                            <i class="fab fa-whatsapp"></i> Book on WhatsApp
+                        </a>
+                    </div>
+                    
+                    <div class="quick-book-card">
+                        <div class="quick-book-icon phone-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Call to Book</h3>
+                        <p>Speak with us directly to check availability and book your stay.</p>
+                        <a href="tel:+237670000000" class="btn btn-secondary btn-full">
+                            <i class="fas fa-phone-alt"></i> +237 670 000 000
+                        </a>
+                    </div>
+                    
+                    <div class="booking-info-card">
+                        <h4><i class="fas fa-info-circle"></i> Booking Information</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Free cancellation up to 48 hours before check-in</li>
+                            <li><i class="fas fa-check"></i> Pool access included with every room</li>
+                            <li><i class="fas fa-check"></i> 24/7 security and gated compound</li>
+                            <li><i class="fas fa-check"></i> Solar power backup</li>
+                            <li><i class="fas fa-check"></i> Airport pickup can be arranged</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="booking-info-card">
+                        <h4><i class="fas fa-clock"></i> Check-in / Check-out</h4>
+                        <div class="checkin-times">
+                            <div class="time-item">
+                                <strong>Check-in</strong>
+                                <span>From 2:00 PM</span>
+                            </div>
+                            <div class="time-item">
+                                <strong>Check-out</strong>
+                                <span>By 12:00 PM</span>
+                            </div>
+                        </div>
+                        <p class="time-note">Early check-in and late check-out available on request.</p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Thank You Message (shown after form submission) -->
+            <div id="booking-thanks" class="booking-thanks" style="display:none;">
+                <div class="thanks-content">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Booking Request Received!</h3>
+                    <p>Thank you for your interest in The Oasis Buea. We've received your booking request and will confirm your reservation within 2 hours during business hours.</p>
+                    <p>For immediate assistance, contact us on WhatsApp:</p>
+                    <a href="https://wa.me/237670000000" target="_blank" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
     <!-- ============================================ -->
     <!-- CONTACT SECTION                              -->
     <!-- ============================================ -->
