@@ -582,17 +582,26 @@ img {
     overflow: hidden;
 }
 
+/* ---- Fix Studio Card Stretching Issue ---- */
 .room-card.room-coming-soon .room-image {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+    display: block; /* Change from flex to block */
+    width: 100%;
+    position: relative;
 }
 
-.room-card.room-coming-soon .room-image > img,
-.room-card.room-coming-soon .room-image > a {
-    height: 100%;
-    min-height: 100%;
-    display: block;
+.room-card.room-coming-soon .room-image img {
+    width: 100%;
+    height: 250px; /* Force uniform cover height matching other main images */
+    object-fit: cover;
+}
+
+/* Optional spacer to keep studio content perfectly aligned with cards that have 4 thumbnail photos */
+.room-card.room-coming-soon .room-image-spacer {
+    height: 60px; /* Matches the height of the thumbnail row */
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .room-card.room-coming-soon .room-image img {
